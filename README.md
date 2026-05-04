@@ -53,8 +53,7 @@ ml-credit-default-service/
 
 ## 4. Установка
 
-```
-bash
+```bash
 git clone https://github.com/daryashaporewa-netizen/credit-default-service.git
 cd ml-credit-default-service
 
