@@ -202,10 +202,12 @@ curl -X POST http://localhost:5001/predict_ab \
 ## 11. Тесты
 
 ```bash
-python -m pytest -q```
+python -m pytest -q
+```
 
 Результат:
-```9 passed
+```
+9 passed
 ```
 ---
 
