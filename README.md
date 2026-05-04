@@ -50,7 +50,8 @@ UCI Credit Card Default Dataset
 
 ## 4. Установка
 
-```bash git clone <repo>
+```bash
+git clone <repo>
 cd ml-credit-default-service
 
 python -m venv .venv
@@ -62,7 +63,8 @@ pip install -r requirements.txt
 
 ## 5. Обучение
 
-```bash python src/train.py```
+```bash 
+python src/train.py```
 
 Создаст:
 
