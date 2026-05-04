@@ -1,0 +1,52 @@
+{
+  "dataset": {
+    "path": "data/raw/UCI_Credit_Card.csv",
+    "n_rows": 30000,
+    "n_features": 23,
+    "positive_rate": 0.2212,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "model_v1": {
+    "accuracy": 0.6788333333333333,
+    "precision": 0.36807387862796836,
+    "recall": 0.6307460437076111,
+    "f1": 0.4648708692029992,
+    "roc_auc": 0.710365032104938,
+    "confusion_matrix": [
+      [
+        3236,
+        1437
+      ],
+      [
+        490,
+        837
+      ]
+    ],
+    "support_positive": 1327,
+    "support_negative": 4673,
+    "fit_time_seconds": 0.079,
+    "model": "v1_logreg"
+  },
+  "model_v2": {
+    "accuracy": 0.8171666666666667,
+    "precision": 0.657103825136612,
+    "recall": 0.3624717407686511,
+    "f1": 0.46721709567751335,
+    "roc_auc": 0.7777182360917976,
+    "confusion_matrix": [
+      [
+        4422,
+        251
+      ],
+      [
+        846,
+        481
+      ]
+    ],
+    "support_positive": 1327,
+    "support_negative": 4673,
+    "fit_time_seconds": 11.823,
+    "model": "v2_gbm"
+  }
+}

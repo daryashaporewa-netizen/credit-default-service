@@ -1,0 +1,30 @@
+# Бонус: поднятие сервиса одной командой `docker compose up --build`.
+#
+# Что мы здесь делаем:
+# - собираем образ из текущего Dockerfile;
+# - пробрасываем порт 5000;
+# - монтируем папку logs/ как том, чтобы JSON-логи переживали рестарт
+#   контейнера и были доступны хост-системе для дальнейшей отправки в ELK;
+# - монтируем models/ read-only, чтобы можно было заменить модель
+#   снаружи без пересборки образа (полезно для смены v1/v2 без CI).
+
+services:
+  ml-service:
+    build: .
+    image: credit-default-service:latest
+    container_name: credit-default-service
+    ports:
+      - "5001:5000"
+    environment:
+      - LOG_DIR=/app/logs
+      - MODELS_DIR=/app/models
+    volumes:
+      - ./logs:/app/logs
+      - ./models:/app/models:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; r=urllib.request.urlopen('http://localhost:5000/health',timeout=3); sys.exit(0 if r.status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

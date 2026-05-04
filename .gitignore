@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# Project
+logs/*.log
+data/processed/*
+!data/processed/.gitkeep
+
+# Артефакты модели версионируются в репо для удобной демонстрации.
+# В реальном проекте их вытащили бы в DVC/MLflow Model Registry —
+# см. docs/ARCHITECTURE.md.
