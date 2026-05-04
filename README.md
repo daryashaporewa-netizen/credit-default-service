@@ -88,7 +88,7 @@ models/metrics.json```
 
 ```bash
 docker build -t credit-default-service .
-docker run -p 5001:5000 credit-default-service```
+docker run -p 5001:5000 credit-default-service
 
 На macOS порт 5000 был занят → использован 5001
 ```
@@ -232,10 +232,9 @@ python -m pytest -q```
 
 ## 15. Docker Hub
 
-```bash
+bash
 docker tag credit-default-service <username>/credit-default-service
 docker push <username>/credit-default-service
-```
 
 Docker Hub image: https://hub.docker.com/r/dariavdovina/credit-default-service
 
