@@ -26,7 +26,9 @@ UCI Credit Card Default Dataset
 Дисбаланс: ~22% дефолтов
 
 Файл нужно положить в:
-```data/raw/UCI_Credit_Card.csv```
+```
+data/raw/UCI_Credit_Card.csv
+```
 
 ---
 
@@ -51,7 +53,8 @@ ml-credit-default-service/
 
 ## 4. Установка
 
-```bash
+```
+bash
 git clone https://github.com/daryashaporewa-netizen/credit-default-service.git
 cd ml-credit-default-service
 
@@ -208,7 +211,6 @@ python -m pytest -q```
 ---
 
 ## 12. Логирование
-
 
 - формат: JSONL  
 - файл: `logs/predictions.log`  
