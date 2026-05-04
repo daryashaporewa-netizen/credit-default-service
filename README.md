@@ -52,7 +52,7 @@ ml-credit-default-service/
 ## 4. Установка
 
 ```bash
-git clone <repo>
+git clone https://github.com/daryashaporewa-netizen/credit-default-service.git
 cd ml-credit-default-service
 
 python -m venv .venv
@@ -88,7 +88,7 @@ models/metrics.json
 ## 6. Запуск API
 
 ```bash 
-gunicorn -b 0.0.0.0:5000 app.api:app
+gunicorn -b 0.0.0.0:5001 app.api:app
 ```
 ---
 
