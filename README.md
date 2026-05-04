@@ -32,7 +32,8 @@ UCI Credit Card Default Dataset
 
 ## 3. Структура проекта
 
-```ml-credit-default-service/
+```
+ml-credit-default-service/
 ├── app/
 ├── src/
 ├── models/
@@ -64,13 +65,16 @@ pip install -r requirements.txt
 ## 5. Обучение
 
 ```bash 
-python src/train.py```
+python src/train.py
+```
 
 Создаст:
 
-``` models/model_v1.joblib
+```
+models/model_v1.joblib
 models/model_v2.joblib
-models/metrics.json```
+models/metrics.json
+```
 
 Метрики (test):
 
@@ -78,12 +82,14 @@ models/metrics.json```
 |------ |----   |--------|---------- |-------- |
 | v1    | 0.465 | 0.63   | 0.37      | 0.71    |
 | v2    | 0.467 | 0.36   | 0.66      | 0.78    |
-```
+
 ---
 
 ## 6. Запуск API
 
-```bash gunicorn -b 0.0.0.0:5000 app.api:app ```
+```bash 
+gunicorn -b 0.0.0.0:5000 app.api:app
+```
 ---
 
 ## 7. Docker
@@ -108,7 +114,8 @@ docker compose up --build
 ### Health
 
 ```bash
-curl http://localhost:5001/health```
+curl http://localhost:5001/health
+```
 
 ### Predict
 
@@ -234,11 +241,12 @@ python -m pytest -q```
 
 ## 15. Docker Hub
 
-bash
+```bash
 docker tag credit-default-service <username>/credit-default-service
 docker push <username>/credit-default-service
 
 Docker Hub image: https://hub.docker.com/r/dariavdovina/credit-default-service
+```
 
 ---
 
