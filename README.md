@@ -190,13 +190,12 @@ curl -X POST http://localhost:5001/predict_ab \
 python -m pytest -q```
 
 Результат:
+```9 passed
 ```
-9 passed
-```
-
 ---
 
 ## 12. Логирование
+
 
 - формат: JSONL  
 - файл: `logs/predictions.log`  
