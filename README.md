@@ -43,7 +43,8 @@ UCI Credit Card Default Dataset
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
-└── README.md```
+└── README.md
+```
 
 ---
 
@@ -54,7 +55,8 @@ cd ml-credit-default-service
 
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt ```
+pip install -r requirements.txt
+```
 
 ---
 
@@ -74,7 +76,7 @@ models/metrics.json```
 |------ |----   |--------|---------- |-------- |
 | v1    | 0.465 | 0.63   | 0.37      | 0.71    |
 | v2    | 0.467 | 0.36   | 0.66      | 0.78    |
-
+```
 ---
 
 ## 6. Запуск API
@@ -89,13 +91,14 @@ docker build -t credit-default-service .
 docker run -p 5001:5000 credit-default-service```
 
 На macOS порт 5000 был занят → использован 5001
-
+```
 ---
 
 ## 8. Docker Compose
 
 ```bash
-docker compose up --build```
+docker compose up --build
+```
 ---
 
 ## 9. API
@@ -137,7 +140,8 @@ curl -X POST http://localhost:5001/predict \
       "PAY_AMT5": 0,
       "PAY_AMT6": 0
     }
-  }' ```
+  }'
+```
 
 Ответ:
 
